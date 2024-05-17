@@ -38,7 +38,7 @@ module "sa_firewall" {
   depends_on = [module.vpc_networks["net3"]]
 }
 
-module "firewall" {
+module "ap_firewall" {
 
   source        = "./modules/vpcs/firewall"
   name          = local.instances.net4.name
