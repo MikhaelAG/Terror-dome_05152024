@@ -5,7 +5,7 @@ module "eu2ap_vpn_tunnel" {
   project                 = var.networks.net1.project
   region                  = local.instances.net1.region
   peer_ip                 = module.ap_static_ip.address
-  shared_secret           = sensitive("itsasseacreature") # NEVER EXPOSE SECRETS/SENSITIVE INFO IN TF MODULE
+  shared_secret           = sensitive("itsaseacreature") # NEVER EXPOSE SECRETS/SENSITIVE INFO IN TF MODULE
   target_vpn_gateway      = module.eu2ap_vpn_gateway.id
   local_traffic_selector  = [element(local.subnets, 0)]
   remote_traffic_selector = [element(local.subnets, 3)]
@@ -24,7 +24,7 @@ module "ap2eu_vpn_tunnel" {
   project                 = var.networks.net4.project
   region                  = local.instances.net4.region
   peer_ip                 = module.eu_static_ip.address
-  shared_secret           = sensitive("itsasseacreature") # NEVER EXPOSE SECRETS/SENSITIVE INFO IN TF MODULE
+  shared_secret           = sensitive("itsaseacreature") # NEVER EXPOSE SECRETS/SENSITIVE INFO IN TF MODULE
   target_vpn_gateway      = module.ap2eu_vpn_gateway.id
   local_traffic_selector  = [element(local.subnets, 3)]
   remote_traffic_selector = [element(local.subnets, 0)]
