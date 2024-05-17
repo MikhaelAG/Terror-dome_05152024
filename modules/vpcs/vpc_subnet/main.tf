@@ -17,25 +17,25 @@ resource "google_compute_subnetwork" "subnet" {
 ##       ADD AS MANY AS ATTRIBUTES NEEDED :-)
 
 output "name" {
-  value = google_compute_subnetwork.sub-sg.name
+  value = google_compute_subnetwork.subnet.name
 }
 
 output "network" {
-  value = google_compute_subnetwork.sub-sg.network
+  value = google_compute_subnetwork.subnet.network
 }
 
 output "ip_cidr_range" {
-  value = google_compute_subnetwork.sub-sg.ip_cidr_range
+  value = google_compute_subnetwork.subnet.ip_cidr_range
 }
 
 output "region" {
-  value = google_compute_subnetwork.sub-sg.region
+  value = google_compute_subnetwork.subnet.region
 }
 
 output "id" {
-  value = google_compute_subnetwork.sub-sg.id
+  value = google_compute_subnetwork.subnet.id
 }
 
 output "self_link" {
-  value = google_compute_subnetwork.sub-sg.self_link
+  value = google_compute_subnetwork.subnet.self_link
 }
